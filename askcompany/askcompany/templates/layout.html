@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,13 +9,17 @@
         background-color: lightpink;
       }
     </style>
-    {% block extra_head %} {% endblock %}
+    {% block extra_head %}     <link rel="stylesheet" href="{% static "main.css" %}" />{% endblock %}
   </head>
   <body>
     <h1>heejin</h1>
     {% block content %} {% endblock %}
 
     <hr />
-    &copy; 2021. Heejin. {% block extra_body %} {% endblock %}
+    &copy; 2021. Heejin. 
+    
+    {% block extra_body %} 
+    <script src="{% static "main.js" %}"></script> 
+    {% endblock %}
   </body>
 </html>
