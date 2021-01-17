@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>heejin</title>
-  </head>
-  <body>
-    <h1>Ask Company</h1>
-
-    <form action="" method="GET">
-      <input type="text" name="q" value="{{ q }}" />
-      <input type="submit" value="search" />
-    </form>
-    {% for item in item_list %}
-    <div>
-      <h3>{{ item.name }}</h3>
-      <h4>{{ item.price }}</h4>
-      <p>{{ item.desc }}</p>
-    </div>
-    {% endfor %}
-  </body>
-</html>
+{% extends "shop/layout.html" %} {% block content%}
+<form action="" method="GET">
+  <input type="text" name="q" value="{{ q }}" />
+  <input type="submit" value="search" />
+</form>
+<ul>
+  {% for item in item_list %}
+  <li>
+    <a href="/shop/{{ item.pk }}/"> {{item.name}} </a>
+    {{item.price}} {{item.desc}}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
