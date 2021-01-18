@@ -139,3 +139,4 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 from django.urls import reverse_lazy
 
 LOGIN_URL = reverse_lazy('login')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
