@@ -1,25 +1,18 @@
-{% load static fresh_static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>{% block title %} heejin company {% endblock %}</title>
-    <style>
-      body {
-        background-color: lightpink;
-      }
-    </style>
-    {% block extra_head %}     <link rel="stylesheet" href="{% fresh_static "main.css" %}" />{% endblock %}
+    <title>AskDjango Blog</title>
   </head>
   <body>
-    <h1>heejin</h1>
+    <h1>AskDjango Blog</h1>
+
+    회원가입, 로그인, 로그아웃
+    <hr />
+
     {% block content %} {% endblock %}
 
     <hr />
-    &copy; 2021. Heejin. 
-    
-    {% block extra_body %} 
-    <script src="{% static "main.js" %}"></script> 
-    {% endblock %}
+    &copy; 2021. heejin
   </body>
 </html>
