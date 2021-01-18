@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'shop',
     'blog',
     'common',
+    'accounts',
     # 'debug_toolbar',
 ]
 
@@ -134,3 +135,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+from django.urls import reverse_lazy
+
+LOGIN_URL = reverse_lazy('login')
